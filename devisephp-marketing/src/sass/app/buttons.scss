@@ -1,0 +1,43 @@
+.btn {
+  @apply text-center inline-block py-4 px-6 no-underline uppercase font-sans font-bold;
+
+  &:focus {
+    outline:none;
+  }
+}
+
+.btn-square {
+  @apply p-6;
+}
+
+.btn-sm {
+  @apply text-sm;
+}
+
+.btn-xs {
+  @apply text-xs;
+}
+
+.btn-2xs {
+  @apply text-2xs;
+}
+
+.btn-blue {
+  @apply bg-blue text-white;  
+}
+
+.btn-link {
+  @apply p-0 bg-transparent;
+}
+
+.btn-ghost {
+  @apply border bg-transparent;
+}
+
+.right-arrow {
+  &:after {
+    content: "\2192";
+    font-size: 1em;
+    padding-left: 15px;  
+  }
+}

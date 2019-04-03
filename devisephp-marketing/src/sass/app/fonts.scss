@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700|PT+Serif:400,400i,700');
+
+@font-face {
+  font-family: 'atlantis';
+  src:  url('/fonts/atlantis.eot?pbsh7r');
+  src:  url('/fonts/atlantis.eot?pbsh7r#iefix') format('embedded-opentype'),
+    url('/fonts/atlantis.ttf?pbsh7r') format('truetype'),
+    url('/fonts/atlantis.woff?pbsh7r') format('woff'),
+    url('/fonts/atlantis.svg?pbsh7r#atlantis') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src:  url('/fonts/glyphicons-halflings-regular.eot?pbsh7r');
+  src:  url('/fonts/glyphicons-halflings-regular.eot?pbsh7r#iefix') format('embedded-opentype'),
+    url('/fonts/glyphicons-halflings-regular.ttf?pbsh7r') format('truetype'),
+    url('/fonts/glyphicons-halflings-regular.woff?pbsh7r') format('woff'),
+    url('/fonts/glyphicons-halflings-regular.svg?pbsh7r#halflings') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'atlantis' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.glyphicon {
+    font-family: 'Glyphicons Halflings' !important;
+  }
+}
+
+.icon-close:before {
+  content: "\e90a";
+}
+.icon-hamburger:before {
+  content: "\e909";
+}
+.icon-circle-arrow:before {
+  content: "\e908";
+}
+.icon-google:before {
+  content: "\e901";
+}
+.icon-youtube:before {
+  content: "\e902";
+}
+.icon-pinterest:before {
+  content: "\e903";
+}
+.icon-instagram:before {
+  content: "\e904";
+}
+.icon-twitter:before {
+  content: "\e905";
+}
+.icon-trip-advisor:before {
+  content: "\e906";
+}
+.icon-facebook:before {
+  content: "\e907";
+}
+.icon-chevron-down:before {
+  content: "\e900";
+}

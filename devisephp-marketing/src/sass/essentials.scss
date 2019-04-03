@@ -1,0 +1,10 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@import "essentials/globals";
+@import "essentials/navigation";
+@import "essentials/positions";
+@import "essentials/typography";
+
+@tailwind utilities;

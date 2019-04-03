@@ -25,22 +25,8 @@
     <div id="app">
         <div v-cloak>
           <devise>
-            <div slot="on-top" v-if="currentPage.site.id !== 4">
-              {{-- <app-navigation inline-template>
-                <div class="border-b border-grey fixed bg-white z-50 w-full">
-                  @include('partials.desktop-navigation')
-                  @include('partials.mobile-navigation')
-                </div>
-              </app-navigation>
-              <div id="navigation-spacer"></div> --}}
-            </div>
-
             <div slot="static-content">
                 @yield('content')
-            </div>
-
-            <div slot="on-bottom" v-if="currentPage.site.id !== 4">
-              {{-- @include('partials.footer') --}}
             </div>
           </devise>
         </div>

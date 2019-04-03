@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
 const CopyPlugin = require('copy-webpack-plugin');
-// const PagesObject = require('./buildpages.js');
+const PagesObject = require('./buildpages.js');
 
 module.exports = {
   outputDir: '../public/app',
@@ -37,16 +37,16 @@ module.exports = {
   },
 
   indexPath: undefined,
-  // pages: PagesObject,
-  // chainWebpack: (config) => {
-  //   config.plugins.delete('prefetch');
-  //   // TODO: Remove this workaround once https://github.com/vuejs/vue-cli/issues/2463 is fixed
-  //   // Remove preload plugins for multi-page build to prevent infinite recursion
-  //   Object.keys(PagesObject).forEach((page) => {
-  //     config.plugins.delete(`preload-${page}`);
-  //     config.plugins.delete(`prefetch-${page}`);
-  //   });
-  // },
+  pages: PagesObject,
+  chainWebpack: (config) => {
+    config.plugins.delete('prefetch');
+    // TODO: Remove this workaround once https://github.com/vuejs/vue-cli/issues/2463 is fixed
+    // Remove preload plugins for multi-page build to prevent infinite recursion
+    Object.keys(PagesObject).forEach((page) => {
+      config.plugins.delete(`preload-${page}`);
+      config.plugins.delete(`prefetch-${page}`);
+    });
+  },
 
   css: {
     extract: true,

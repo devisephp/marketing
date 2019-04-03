@@ -1,0 +1,103 @@
+@import './../../../node_modules/tiny-slider/src/tiny-slider';
+.tns-controls {
+  @apply absolute z-10 pin;
+
+  button {
+    @apply absolute absolute-center-y;
+
+    &:first-child {
+      @apply ml-8; 
+    }
+
+    &:last-child {
+      @apply pin-r mr-8; 
+    }
+  }
+}
+
+.blocks {
+  @apply relative;
+
+  .tns-controls {
+    @apply pin-b mb-1 pin-r w-full flex justify-between;
+    
+    @screen md {
+      @apply justify-end;
+    }
+
+    button {
+      @apply btn btn-blue btn-square m-8 p-2 py-4;
+
+      img {
+        @apply w-1/2;
+      }
+
+
+      &:first-child {
+        margin-right:1px;  
+      }
+        
+      @screen md {
+        @apply m-0 p-6;
+
+        img {
+          @apply w-auto;
+        }
+      }
+    }
+  }  
+}
+
+.arrows-bottom {
+  @apply relative;
+
+    .tns-controls {
+      @apply absolute pin-b -mb-12;
+
+      top: auto;
+      button {
+        &:first-child {
+          left:30%
+        }
+
+        &:last-child {
+          right:30%
+        }
+      }
+
+      button {
+        @apply mx-2;
+      }
+    }
+}
+
+.prev-arrow {
+  transform: rotate(180deg);
+}
+
+.tns-nav {
+  @apply absolute pin-b z-10 mb-12 absolute-center-x;
+
+  button {
+    @apply bg-white rounded-full mx-2;
+
+    height:5px;
+    width:5px;
+
+    &.tns-nav-active {
+      @apply bg-blue
+    }
+
+    &:focus {
+      outline: 0;  
+    }
+  }  
+}
+
+.tns-controls {
+  button {
+    &:focus {
+      outline: 0;  
+    }
+  }  
+}

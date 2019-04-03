@@ -1,0 +1,189 @@
+ /* Icons */
+.icon {
+    width:50px;
+    height:34px;
+    background-image:url(/imgs/ui/icons.png);
+    background-repeat:no-repeat;
+
+    &.plate-and-utensils { background-position:-25px -612px }
+    &.stars { background-position:-25px -662px }
+    &.curtains { background-position:-26px -550px }
+    &.anchors {
+        width:40px;
+        height:36px;
+        background-position:-25px -487px;
+    }
+    &.pinpoint {
+        width:26px;
+        height:26px;
+        background-position:-30px -292px;
+    }
+    &.sleepy-zs {
+        width:26px;
+        height:26px;
+        background-position:-30px -327px;
+    }
+    &.cake {
+        width:32px;
+        height:26px;
+        background-position:-24px -361px;
+    }
+    &.seat {
+        width:109px;
+        height:24px;
+        background-position:-72px -54px;
+    }
+    &.back-arrow {
+        top:3px;
+        left:-15px;
+        width:15px;
+        height:12px;
+        background-position:-34px -438px;
+    }
+    &.down-arrow {
+        top:20px;
+        left:50%;
+        margin-left:-5px;
+        background-position:-32px -396px;
+        width:11px;
+        height:7px;
+    }
+    &.suitcase {
+        background-position:-72px -99px;
+        width:22px;
+        height:18px;
+    }
+    &.calendar {
+        background-position:-73px -145px;
+        width:18px;
+        height:21px;
+    }
+    &.airplane {
+        background-position:-72px -187px;
+        width:29px;
+        height:28px;
+    }
+    &.waterpark-access {
+        background-position:-72px -240px;
+        width:34px;
+        height:22px;
+    }
+    &.wine-and-dine {
+        background-position:-70px -287px;
+        width:37px;
+        height:27px;
+    }
+    &.wedding-ring {
+        background-position:-83px -487px;
+        width:45px;
+        height:40px;
+    }
+    &.plane-dark-blue {
+        background-position:-142px -187px;
+        width:29px;
+        height:28px;
+    }
+    &.person-in-bed {
+        background-position:-142px -240px;
+        width:36px;
+        height:28px;
+    }
+    &.mobile-menu {
+        background-position:-79px -338px;
+        width:32px;
+        height:24px;
+        top:22px;
+        left:8%;
+        z-index:9010;
+        cursor:pointer;
+    }
+    &.mobile-lang {
+        width: 24px;
+        height: 24px;
+        top:22px;
+        right:9%;
+        background-position:-84px -387px;
+        z-index:9010;
+        cursor:pointer;
+    }
+}
+
+
+.room-icon {
+    width:70px;
+    height:64px;
+    background-image:url(/imgs/ui/room-icons.png);
+    background-repeat:no-repeat;
+
+    &.digital-safe { background-position:-15px -23px }
+    &.internet-access { background-position:-15px -126px }
+    &.room-service { background-position:-117px -117px }
+    &.bed-sizes {
+        width:80px;
+        background-position:-111px -224px;
+    }
+    &.combined-shower-tub {
+        width:87px;
+        background-position:-104px -23px;
+    }
+    &.hdtv {
+        width:80px;
+        background-position:-9px -224px;
+    }
+    &.room-size {
+        width:33px;
+        height:53px;
+        background-position:-33px -525px;
+    }
+    &.reservations {
+        width: 71px;
+        height: 70px;
+        background-position:-19px -318px;
+    }
+    &.operating-hours {
+        width: 60px;
+        height: 70px;
+        background-position:-121px -320px;
+    }
+    &.age-restrictions {
+        width:96px;
+        height:70px;
+        background-position:-2px -426px;
+    }
+    &.occupancy {
+        width:71px;
+        height:53px;
+        background-position:-115px -531px;
+    }
+    &.menus {
+        width:88px;
+        height:70px;
+        background-position:-104px -426px;
+    }
+    &.floor-plan {
+        width:98px;
+        height:98px;
+        background-position:-9px -589px;
+    }
+}
+
+.booking-widget-close {
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    background: url(/imgs/ui/booknow-close-btn.png) no-repeat 0 0;
+    top: -43px;
+    right: 0;
+    width: 46px;
+    height: 52px;
+}
+
+.divider-caret {
+    @apply absolute;
+    
+    width:9px;
+    height:4px;
+    bottom:4px;
+
+    background: url(/imgs/ui/icons.png) no-repeat -56px -34px;
+}

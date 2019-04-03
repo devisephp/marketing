@@ -1,0 +1,31 @@
+fieldset {
+  label {
+    @apply font-sans block mb-2 text-xs uppercase font-bold;
+
+    &.large-label {
+      @apply text-base font-normal normal-case;
+    }
+
+    &.small-label {
+      @apply text-sm font-normal normal-case;
+    }
+  }
+
+  textarea,
+  select,
+  input[type="text"],
+  input[type="search"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="number"],
+  input[type="email"],
+  input[type="phone"] {
+    @apply px-4 py-3 border text-sm w-full text-grey-darkest rounded outline-none appearance-none;
+
+    &.w-auto {
+      @apply w-auto;
+    }
+  }
+}
+
