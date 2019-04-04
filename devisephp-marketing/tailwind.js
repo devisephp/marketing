@@ -232,6 +232,9 @@ module.exports = {
       'Courier New',
       'monospace',
     ],
+    display: [
+      'Patua One',
+    ],
   },
 
 

@@ -1,6 +1,7 @@
 @section('template')
   <div class="relative w-full min-h-threequarterscreen flex flex-col items-center bg-abs-black bg-center bg-no-repeat bg-cover" :style="{backgroundImage:'url(\'' + devise.image.url + '\')'}">
-    <div class="h-10 w-full absolute pin-b" :style="computedStyle"></div>
+    <div class="h-32 w-full absolute pin-b z-20" :style="computedStyle"></div>
+    <smoke class="absolute pin z-10" :generators="5" :color="this.devise.smokeColor.color"></smoke>
   </div>
 @endsection
 
@@ -11,7 +12,7 @@
       description: 'Hero with a static image',
       fields: {
         image: {
-          label: 'Field',
+          label: 'Background Image',
           type: 'image',
           default: {
             url: '/imgs/static-hero.jpg'
@@ -29,6 +30,13 @@
           type: 'color',
           default: {
             color: '#000000'
+          }
+        },
+        smokeColor: {
+          type: 'color',
+          label: 'Smoke Color',
+          default: {
+            color: '#22292f'
           }
         }
       },
