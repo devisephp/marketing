@@ -1,10 +1,10 @@
 @section('template')
-<div class="relative flex justify-center p-4" :style="gradientBackground">
+<div class="relative flex justify-center p-4">
   <div class="container mt-8 mb-8 md:mb-12 w-full md:w-4/5 flex flex-col items-start" :class="[devise.leftOrRight.value]">
-    <div class="w-1/2 px-10">
+    <div class="w-1/2 px-10" :style="{color: devise.copyColor.color}">
       <h2>
         <span>@{{ devise.titleNotHighlighted.text }}</span>
-        <span class="bg-black p-4 text-white" :style="hightlightedTextColor">@{{ devise.titleHighlighted.text }}</span>
+        <span class="bg-black p-4 text-white" v-if="devise.titleHighlighted.enabled">@{{ devise.titleHighlighted.text }}</span>
       </h2>
       <div v-html="devise.copy.text" class="my-6 leading-loose"></div>
     </div>
@@ -12,14 +12,13 @@
       <slices :slices="slices" class="w-1/2 p-4"></slices>
     </div>
   </div>
-  <div style="background: url('/imgs/patterns/diamonds.png')" class="absolute pin"></div>
 </div>
 @endsection
 
 
 @section('component')
   <script>
-    let component = {
+    var component = {
       preview: ['{Bbg}'],
       description: 'Paragraph and a slot for child slices',
       fields: {
@@ -37,8 +36,10 @@
         titleHighlighted: {
           label: 'Title Highlighted',
           type: 'text',
+          enabler: true,
           default: {
-            text: 'In Context'
+            text: 'In Context',
+            enabled: false
           }
         },
         titleNotHighlighted: {
@@ -52,32 +53,33 @@
           label: 'Primary Copy',
           type: 'wysiwyg'
         },
-        backgroundColorLeft: {
-          label: 'Background Color Left',
+        copyColor: {
+          label: 'Copy Color',
           type: 'color',
           default: {
-            color: '#e8f9e8'
+            color: '#000000'
           }
+        }
+      },
+      props: {
+        backgroundColorLeft: {
+          default: '#ffffff',
+          type: String
         },
         backgroundColorRight: {
-          label: 'Background Color Right',
-          type: 'color',
-          default: {
-            color: '#f0f5b4'
-          }
-        },
+          default: '#ffffff',
+          type: String
+        }
       },
       computed: {
-        gradientBackground: function () {
-          return {
-            background: 'linear-gradient(to right, '+ this.devise.backgroundColorLeft.color +', '+ this.devise.backgroundColorRight.color +')'
-          }
-        },
         hightlightedTextColor: function () {
-          if (this.devise.leftOrRight.value === 'md:flex-row-reverse') {
-            return {color: this.devise.backgroundColorRight.color}
+          if (this.backgroundColorRight) {
+            if (this.devise.leftOrRight.value === 'md:flex-row-reverse') {
+              return { color: this.backgroundColorRight };
+            }
+            return { color: this.backgroundColorLeft };
           }
-          return {color: this.devise.backgroundColorLeft.color}
+          return null;
         }
       }
     }

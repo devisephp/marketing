@@ -7,6 +7,12 @@
     {!! Devise::head() !!}
     @endif
 
+    @if(Auth::user())
+      <link href=/devise/css/chunk-vendors.css rel=stylesheet>
+      <link href=/devise/css/main.css rel=stylesheet>
+      <link href=/devise/css/styles.css rel=stylesheet>
+    @endif
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,33 +31,19 @@
     <div id="app">
         <div v-cloak>
           <devise>
-            <div slot="on-top" v-if="currentPage.site.id !== 4">
-              {{-- <app-navigation inline-template>
-                <div class="border-b border-grey fixed bg-white z-50 w-full">
-                  @include('partials.desktop-navigation')
-                  @include('partials.mobile-navigation')
-                </div>
-              </app-navigation>
-              <div id="navigation-spacer"></div> --}}
-            </div>
+            <div slot="on-top"></div>
 
             <div slot="static-content">
                 @yield('content')
             </div>
 
-            <div slot="on-bottom" v-if="currentPage.site.id !== 4">
-              {{-- @include('partials.footer') --}}
-            </div>
+            <div slot="on-bottom"></div>
           </devise>
         </div>
     </div>
 
     <script rel="prefetch" src="{{vuemix('/js/chunk-vendors.js', '/app')}}"></script>
     <script rel="prefetch" src="{{vuemix('/js/app.js', '/app')}}"></script>
-
-    @if(Auth::user())
-      <script src="/devise/styles.js"></script>
-    @endif
 
     <noscript id="deferred-styles">
       <link rel="stylesheet" href="{{vuemix('/css/global.css', '/app')}}">

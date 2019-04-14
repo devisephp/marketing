@@ -1,12 +1,5 @@
-@tailwind preflight;
-
-@tailwind components;
-
   @import "./../../node_modules/izitoast/dist/css/iziToast.css";
   @import "essentials/positions";
 
   @import "app/buttons";
   @import "app/forms";
-
-@tailwind utilities;
-

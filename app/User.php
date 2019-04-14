@@ -5,11 +5,15 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-use Spatie\Permission\Traits\HasRoles;
+use Devise\Traits\HasPermissions;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasRoles;
+    use Notifiable, HasPermissions;
+
+    protected $appends = [
+        'permissions_list'
+    ];
 
     /**
      * The attributes that are mass assignable.
@@ -28,20 +32,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function getPermissionsListAttribute()
-    {
-        return $this->getAllPermissions();
-    }
-
-    public function hasPermission($permission)
-    {
-        if($permission == 'access admin' && $this->hasRole('Editor')){
-            $pagePermissionName = 'edit ' . request()->route()->getName();
-
-            return $this->can($pagePermissionName);
-        }
-
-        return $this->can($permission);
-    }
 }
