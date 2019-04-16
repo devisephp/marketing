@@ -7,12 +7,12 @@
           width="100"
         >
       </div>
-      <div class="text-sm md:text-lg font-sans uppercase flex flex-col">
+      <div class="text-sm md:text-lg font-sans uppercase flex flex-col md:flex-row">
         <a
           href="https://github.com/devisephp/cms"
           target="_blank"
           :class="{'text-black': pinned, 'text-white': !pinned}"
-          class="mr-8 mb-2"
+          class="mr-8 mb-2 md:mb-0"
         >
           <github-icon></github-icon>
           <span class="text-sm md:text-base ml-2">Github</span>
@@ -20,7 +20,7 @@
         <a
           href="https://devise.gitbook.io/cms/"
           target="_blank"
-          class="mb-2"
+          class="mb-2 md:mb-0"
           :class="{'text-black': pinned, 'text-white': !pinned}"
         >
           <document-icon></document-icon>

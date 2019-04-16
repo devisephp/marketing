@@ -1,4 +1,5 @@
 {
+  "app-ui.css": "css/app-ui.css",
   "app-ui.js": "js/app-ui.js",
   "app-ui.js.map": "js/app-ui.js.map",
   "app.css": "css/app.css",
