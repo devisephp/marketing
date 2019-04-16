@@ -199,6 +199,7 @@ module.exports = {
 
   fonts: {
     sans: [
+      'Montserrat',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -968,7 +969,7 @@ module.exports = {
   plugins: [
     // eslint-disable-next-line import/no-extraneous-dependencies
     require('tailwindcss/plugins/container')({
-      // center: true,
+      center: true,
       // padding: '1rem',
     }),
   ],

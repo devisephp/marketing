@@ -20,6 +20,8 @@ import EventBus from './event-bus';
 
 // dynamic import component
 Vue.component('smoke', () => import(/* webpackChunkName: "app-ui" */ './components/Smoke.vue'));
+Vue.component('navigation', () => import(/* webpackChunkName: "app-ui" */ './components/Navigation.vue'));
+Vue.component('key', () => import(/* webpackChunkName: "app-ui" */ './components/Key.vue'));
 Vue.component('color-swapper', () => import(/* webpackChunkName: "app-ui" */ './components/ColorSwapper.vue'));
 Vue.component('check-icon', () => import(/* webpackChunkName: "app-ui" */ 'vue-feather-icons/icons/CheckSquareIcon'));
 Vue.component('hash-icon', () => import(/* webpackChunkName: "app-ui" */ 'vue-feather-icons/icons/HashIcon'));
@@ -30,6 +32,7 @@ Vue.component('link-icon', () => import(/* webpackChunkName: "app-ui" */ 'vue-fe
 Vue.component('droplet-icon', () => import(/* webpackChunkName: "app-ui" */ 'vue-feather-icons/icons/DropletIcon'));
 Vue.component('dropdown-icon', () => import(/* webpackChunkName: "app-ui" */ 'vue-feather-icons/icons/ClipboardIcon'));
 Vue.component('type-icon', () => import(/* webpackChunkName: "app-ui" */ 'vue-feather-icons/icons/TypeIcon'));
+Vue.component('github-icon', () => import(/* webpackChunkName: "app-ui" */ 'vue-feather-icons/icons/GithubIcon'));
 
 Vue.config.productionTip = false;
 

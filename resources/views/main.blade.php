@@ -31,7 +31,9 @@
     <div id="app">
         <div v-cloak>
           <devise>
-            <div slot="on-top"></div>
+            <div slot="on-top">
+              <navigation></navigation>
+            </div>
 
             <div slot="static-content">
                 @yield('content')

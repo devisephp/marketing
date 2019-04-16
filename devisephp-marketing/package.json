@@ -12,9 +12,12 @@
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "devisephp-interface": "^2.0.9",
+    "postprocessing": "^6.2.1",
+    "three": "^0.103.0",
     "tinycolor2": "^1.4.1",
     "vue": "^2.6.6",
     "vue-feather-icons": "^4.10.0",
+    "vue-headroom": "^0.10.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
