@@ -1,10 +1,10 @@
 @section('template')
-<div class="flex justify-center p-16">
+<div class="flex justify-center p-8 md:p-16">
   <div class="container mt-8 mb-8 md:mb-12 w-full md:w-4/5 flex flex-col md:flex-row items-start">
-    <div class="w-3/5 pr-8">
+    <div class="w-full md:w-3/5 pr-8">
       <img class="mb-6" v-devise-image="{breakpoint: breakpoint, image: devise.topImage}">
-      <div class="font-display text-pink  w-full md:w-3/4 " v-if="devise.introduction.enabled && devise.introduction.text">
-        <h1 v-if="devise.introductionSize.value == 'h1'" v-html="devise.introduction.text"></h1>
+      <div class="font-display text-pink w-full md:w-3/4 " v-if="devise.introduction.enabled && devise.introduction.text">
+        <h1 v-if="devise.introductionSize.value == 'h1'" v-html="devise.introduction.text" class="text-xl md:text-3xl"></h1>
         <h2 v-if="devise.introductionSize.value == 'h2'" v-html="devise.introduction.text"></h2>
         <h3 v-if="devise.introductionSize.value == 'h3'" v-html="devise.introduction.text"></h3>
         <h4 v-if="devise.introductionSize.value == 'h4'" v-html="devise.introduction.text"></h4>
@@ -96,13 +96,13 @@
             url: '/imgs/sidebar-interface.png'
           }
         },
-        smokeColor: {
-          type: 'color',
-          label: 'Smoke Color',
-          default: {
-            color: '#22292f'
-          }
-        }
+        // smokeColor: {
+        //   type: 'color',
+        //   label: 'Smoke Color',
+        //   default: {
+        //     color: '#22292f'
+        //   }
+        // }
       }
     }
   </script>

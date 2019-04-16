@@ -1,5 +1,5 @@
 @section('template')
-<div class="flex justify-center p-8 px-16">
+<div class="flex justify-center p-8 md:px-16">
   <div class="container flex flex-col items-center" :class="['text-' + devise.alignment.value]">
     <div class="w-full" :class="[devise.desktopSize.value]">
       <div class="font-display text-white" v-if="devise.title.enabled && devise.title.text">

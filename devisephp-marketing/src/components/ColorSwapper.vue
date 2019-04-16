@@ -1,18 +1,18 @@
 <template>
   <div
-    class="flex justify-center p-16"
+    class="flex justify-center p-8 md:p-16"
     style="transition: all 1s;"
     :style="{backgroundColor: backgroundColor}"
   >
     <div class="container mt-8 mb-8 md:mb-12 w-full flex flex-col md:flex-row items-center">
-      <div class="w-1/2 px-10">
+      <div class="w-full md:w-1/2 px-10">
         <h2 class="font-display mb-8">{{ devise.title.text }}</h2>
         <div
           class="leading-loose"
           v-html="devise.copy.text"
         ></div>
       </div>
-      <div class="w-1/2 text-center">
+      <div class="w-full md:w-1/2 text-center">
         <h3 class="mb-4">What is a slice?</h3>
         <p class="mb-10 leading-normal font-sans">
           Oh... well, this whole {{ color }} area is a slice. This is actually a

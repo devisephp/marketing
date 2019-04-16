@@ -6,7 +6,7 @@
       'items-start': devise.alignTop.checked, 
       'items-center': !devise.alignTop.checked
     }">
-    <slices :slices="slices" class="w-1/2"></slices>
+    <slices :slices="slices" class="w-full md:w-1/2"></slices>
   </div>
 </div>
 
